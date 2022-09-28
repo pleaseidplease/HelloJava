@@ -38,5 +38,6 @@ public class App {
 			}
 		}
 		System.out.println(sum);
+//		정상 커밋완료
 	}
 }
