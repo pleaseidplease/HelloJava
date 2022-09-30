@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class WhileBankApp {
 	public static void main(String[] args) {
 		// 메뉴:1:예금,2:출금,3:잔액,4:종료
-		Account[] banks = new Account[10];
+		Account banks = new Account();
 		Scanner scn = new Scanner(System.in);
 		boolean run=true;
 		while (run) {
@@ -20,10 +20,10 @@ public class WhileBankApp {
 				System.out.println("계좌번호>>>");
 				String accNo = scn.nextLine();							
 				for (int i = 0; i < banks.length; i++) {
-					if (banks[i] != null && banks[i].accNo.equals(accNo)) {
+					if (banks[i] != null && banks[i].getAc().equals(accNo)) {
 						System.out.println("예금할 금액>>>");
 						int money = scn.nextInt();
-						banks[i].balance = banks[i].balance + money;
+						banks[i].getbal() = banks[i].getbal() + money;
 					}
 					else {
 						System.out.println("일치하는 계좌가 없습니다");
